@@ -1,0 +1,61 @@
+{
+  "@@last_modified": "2020-03-31T23:01:10.161161",
+  "title": "Flutter 应用",
+  "@title": {
+    "description": "这是app的标题",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sayHello": "\b\b你好 {name}",
+  "@sayHello": {
+    "description": "这是一个传值测试案例",
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "example": "Anles"
+      }
+    }
+  },
+  "home": "首页",
+  "@home": {
+    "description": "导航首页",
+    "type": "text",
+    "placeholders": {}
+  },
+  "category": "分类",
+  "@category": {
+    "description": "导航分类",
+    "type": "text",
+    "placeholders": {}
+  },
+  "shoppingCart": "购物车",
+  "@shoppingCart": {
+    "description": "导航购物车",
+    "type": "text",
+    "placeholders": {}
+  },
+  "information": "我的",
+  "@information": {
+    "description": "导航我的",
+    "type": "text",
+    "placeholders": {}
+  },
+  "setting": "设置",
+  "@setting": {
+    "description": "设置页面标题",
+    "type": "text",
+    "placeholders": {}
+  },
+  "language": "语言",
+  "@language": {
+    "description": "语言页面标题",
+    "type": "text",
+    "placeholders": {}
+  },
+  "theme": "皮肤",
+  "@theme": {
+    "description": "皮肤页面标题",
+    "type": "text",
+    "placeholders": {}
+  }
+}
