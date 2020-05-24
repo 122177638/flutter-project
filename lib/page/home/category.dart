@@ -61,7 +61,10 @@ class _CategoryState extends State<Category> {
       }
     });
   }
-
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
   @override
   void dispose() {
     super.dispose();
