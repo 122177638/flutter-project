@@ -1,23 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'messages_all.dart'; //1
-
-class I10n{
-  static Future<I10n> load(Locale locale) {
-    final String name = locale.countryCode.isEmpty ? locale.languageCode : locale.toString();
-    final String localeName = Intl.canonicalizedLocale(name);
-    //2
-    return initializeMessages(localeName).then((b) {
-      Intl.defaultLocale = localeName;
-      return new I10n();
-    });
-  }
-
-  static I10n of(BuildContext context) {
-    return Localizations.of<I10n>(context, I10n);
-  }
-
-  String get title {
+class I10nApp {
+   String get title {
     return Intl.message(
       'Flutter 应用',
       name: 'title',
@@ -83,6 +68,21 @@ class I10n{
       name: 'theme',
       desc: '皮肤页面标题'
     );
+  }
+}
+class I10n extends I10nApp{
+  static Future<I10n> load(Locale locale) {
+    final String name = locale.countryCode.isEmpty ? locale.languageCode : locale.toString();
+    final String localeName = Intl.canonicalizedLocale(name);
+    //2
+    return initializeMessages(localeName).then((b) {
+      Intl.defaultLocale = localeName;
+      return new I10n();
+    });
+  }
+
+  static I10n of(BuildContext context) {
+    return Localizations.of<I10n>(context, I10n);
   }
 }
 
