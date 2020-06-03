@@ -10,7 +10,7 @@ class ThemePage extends StatelessWidget {
     var themeColors = themeModule.themeColors;
     return Scaffold(
       appBar: AppBar(
-        title: Text(I10n().language),
+        title: Text(I10n().theme),
       ),
       body: ListView.separated(
         itemCount: themeColors.length,

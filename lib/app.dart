@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ft_project/common/global.dart';
 import 'package:ft_project/store/locale-module.dart';
 import 'package:ft_project/store/theme-module.dart';
 import 'package:provider/provider.dart';
@@ -11,6 +12,7 @@ class App extends StatelessWidget{
     LocaleModule localeModule = Provider.of<LocaleModule>(context);
     ThemeModule themeModule = Provider.of<ThemeModule>(context);
     return new MaterialApp(
+      navigatorKey: Global.navigatorKey,
       onGenerateTitle: (context){
         // 此时context在Localizations的子树中
         return I10n.of(context).title;
@@ -37,6 +39,13 @@ class App extends StatelessWidget{
           localeModule.localeChange(locale.toString());
           return locale;
         }
+      },
+      builder: (context, widget) {
+        return MediaQuery(
+          //设置文字大小不随系统设置改变
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+          child: widget,
+        );
       },
       locale: localeModule.getLocale,
       theme: ThemeData(
