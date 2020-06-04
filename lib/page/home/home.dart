@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:ft_project/api/index.dart';
 
@@ -12,9 +10,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   @override
-  void didChangeDependencies() {
+  void didChangeDependencies() async {
     super.didChangeDependencies();
-    print('Home');
     Apis().getInfo().then((value) {
       print(value.data);
     }).catchError((err) => {

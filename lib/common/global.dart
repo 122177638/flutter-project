@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:ft_project/api/httpRequest.dart';
+import 'package:ft_project/common/httpRequest.dart';
 
 class Global {
   /// navigatorKey

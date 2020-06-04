@@ -1,13 +1,12 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ft_project/common/global.dart';
+// import 'package:ft_project/common/log.dart' show collectLog, makeDetails, reportErrorAndLog;
 import 'package:ft_project/store/app-module.dart' show AppModule;
 import 'package:ft_project/store/locale-module.dart' show LocaleModule;
 import 'package:ft_project/store/theme-module.dart' show ThemeModule;
 import 'app.dart' show App;
 import 'package:provider/provider.dart';
-import 'common/flutter-error.dart'
-    show collectLog, makeDetails, reportErrorAndLog;
 
 void main() {
   // FlutterError.onError = (FlutterErrorDetails details) {

@@ -1,4 +1,4 @@
-import 'package:ft_project/api/httpRequest.dart';
+import 'package:ft_project/common/httpRequest.dart';
 
 class AccountApi {
   Future<Response> getInfo() {
